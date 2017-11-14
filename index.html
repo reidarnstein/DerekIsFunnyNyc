@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Derek is funny NYC</title>
+        <style>
+            .wrapper {
+                background-image: url(./images/background.jpg);
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+            }
+            .content-container {
+                width: 560px;
+            }
+            .full-width {
+                width: 100%;
+            }
+            .video {
+                width: 560px;
+                height: 315px;
+            }
+            .social-wrapper {
+                display: flex;
+                flex-direction: row;
+            }
+            .social-link {
+                flex: 0 0 25%;
+                text-align: center;
+                text-decoration: none;
+            }
+            .icon {
+                width: 30px;
+                height: 30px;
+            }
+            @media only screen and (max-width: 720px) {
+                .video {
+                    width: 325px;
+                    height: 183px;
+                }
+                .content-container {
+                    width: 325px;
+                }
+            }
+            body {
+                padding: 0px;
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content-container">
+                <div><iframe frameborder="0" allowfullscreen class="video" src="https://drive.google.com/file/d/0B-h1TLb1baI9d3BoTzNRb0JRYVE/preview"></iframe></div>
+                <div class="full-width"><img width="100%" src="./images/title.png" /></div>
+                <div class="full-width social-wrapper">
+                    <a target="_blank" href="http://www.facebook.com" class="social-link"><img class="icon" src="./images/facebook.png" /></a>
+                    <a target="_blank" href="http://www.instagram.com" class="social-link"><img class="icon" src="./images/instagram.png" /></a>
+                    <a target="_blank" href="http://twitter.com" class="social-link"><img class="icon" src="./images/twitter.png" /></a>
+                    <a target="_blank" href="http://tumblr.com" class="social-link"><img class="icon" src="./images/tumblr.png" /></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
