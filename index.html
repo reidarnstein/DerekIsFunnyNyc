@@ -5,6 +5,7 @@
         <title>Derek is funny NYC</title>
         <style>
             .wrapper {
+                overflow: auto;
                 background-image: url(./images/background.jpg);
                 width: 100vw;
                 height: 100vh;
@@ -14,38 +15,40 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                background-position: center; 
+                background-position: center;
             }
             .content-container {
-                width: 560px;
+                max-width: 500px;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
             }
             .full-width {
                 width: 100%;
             }
-            .video {
-                width: 560px;
-                height: 315px;
-            }
-            .social-wrapper {
+            .row {
                 display: flex;
                 flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-items: center;
             }
-            .social-link {
-                flex: 0 0 25%;
-                text-align: center;
-                text-decoration: none;
+            .vendor-link {
+                height: 50px;
             }
             .icon {
                 width: 30px;
                 height: 30px;
             }
+            .height-quarter {
+                height: 25%;
+            }
+            .height-half {
+                height: 50%;
+            }
             @media only screen and (max-width: 720px) {
-                .video {
-                    width: 325px;
-                    height: 183px;
-                }
                 .content-container {
-                    width: 325px;
+                    width: 100%;
                 }
             }
             body {
@@ -57,42 +60,38 @@
     <body>
         <div class="wrapper">
             <div class="content-container">
-                <div id="wistia_fv103vyvur" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-                <div class="full-width"><img width="100%" src="./images/title.png" /></div>
-                <div class="full-width social-wrapper">
-                    <a target="_blank" href="http://www.facebook.com" class="social-link"><img class="icon" src="./images/facebook.png" /></a>
-                    <a target="_blank" href="http://www.instagram.com" class="social-link"><img class="icon" src="./images/instagram.png" /></a>
-                    <a target="_blank" href="http://twitter.com" class="social-link"><img class="icon" src="./images/twitter.png" /></a>
-                    <a target="_blank" href="http://tumblr.com" class="social-link"><img class="icon" src="./images/tumblr.png" /></a>
+                <div class="height-quarter">
+                    <div class="full-width"><img width="100%" src="./images/streamingtitle.png" /></div>
+                    <div class="full-width row">
+                        <a target="_blank" href="https://www.amazon.com/dp/B07F6TYWG2/ref=cm_sw_r_cp_ep_dp_nTNuBb74F1R9Q"><img class="vendor-link" src="./images/amazonstreaming.png" /></a>
+                        <a target="_blank" href="https://youtu.be/5tiDplW8Idg"><img class="vendor-link" src="./images/youtube.png" /></a>
+                        <a target="_blank" href="https://play.google.com/store/movies/details/Derek_is_Funny?id=5tiDplW8Idg"><img class="vendor-link" src="./images/googleplay.png" /></a>
+                    </div>
+                </div>
+                <div class="height-half">
+                    <div class="row">
+                        <video class="full-width" controls>
+                            <source src="https://youtu.be/A8UWBkgpKyE" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- <div><iframe frameborder="0" allowfullscreen class="video" src="https://youtu.be/A8UWBkgpKyE"></iframe></div> -->
+                    <div class="full-width"><img width="100%" src="./images/title.png" /></div>
+                    <div class="full-width row">
+                        <a target="_blank" href="https://www.facebook.com/DerekIsFunny/"><img class="icon" src="./images/facebook.png" /></a>
+                        <a target="_blank" href="https://www.instagram.com/derekisfunnynyc/"><img class="icon" src="./images/instagram.png" /></a>
+                        <a target="_blank" href="http://twitter.com"><img class="icon" src="./images/twitter.png" /></a>
+                        <a target="_blank" href="http://tumblr.com"><img class="icon" src="./images/tumblr.png" /></a>
+                    </div>
+                </div>
+                <div class="height-quarter">
+                    <div class="full-width"><img width="100%" src="./images/dvdtitle.png" /></div>
+                    <div class="full-width row">
+                        <a target="_blank" href="https://www.bestbuy.com/site/derek-is-funny-dvd-2018/34116439.p?skuId=34116439"><img class="vendor-link" src="./images/bestbuy.png" /></a>
+                        <a target="_blank" href="https://www.amazon.com/dp/B07D2Y538J/ref=cm_sw_r_cp_ep_dp_URNuBbB742V9V"><img class="vendor-link" src="./images/amazonpurchase.png" /></a>
+                        <a target="_blank" href="https://www.target.com/p/derek-is-funny-dvd/-/A-53753382 "><img class="vendor-link" src="./images/target.png" /></a>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
-    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/playlist-v1.js"></script>
-    <script>
-        wistiaPlaylist = Wistia.playlist("fv103vyvur", {
-        version: "v1",
-        theme: "tab",
-        videoOptions: {
-            volumeControl: true,
-            playerColor: "FFE64A",
-            autoPlay: true,
-            videoWidth: "640",
-            videoHeight: "360",
-            inlineOptionsOnly: true,
-            version: "v1"
-        },
-        videoFoam: "false",
-        media_0_0: {
-            autoPlay: false,
-            controlsVisibleOnLoad: false
-        },
-        plugin: {
-            "requireEmail-v1": {
-                bottomText: "Enter your email address\nto view the next trailer and more.",
-                topText: "Hope you liked Derek!"
-            }
-        }
-        });
-    </script>
 </html>
