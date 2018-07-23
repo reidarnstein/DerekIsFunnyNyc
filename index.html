@@ -2,6 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
++       <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
++       <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
++       <link rel="manifest" href="./favicons/manifest.json">
++       <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
++       <meta name="theme-color" content="#ffffff">
         <title>Derek is funny NYC</title>
         <style>
             .wrapper {
@@ -18,7 +25,7 @@
                 background-position: center;
             }
             .content-container {
-                max-width: 500px;
+                max-width: 490px;
                 padding: 2rem;
                 display: flex;
                 flex-direction: column;
@@ -40,9 +47,23 @@
                 width: 30px;
                 height: 30px;
             }
-            @media only screen and (max-width: 720px) {
+            .iframe-wrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 25px;
+                height: 0;
+            }
+            .iframe-wrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            @media only screen and (max-width: 550px) {
                 .content-container {
                     width: 100%;
+                    max-width: none;
                 }
             }
             body {
@@ -63,10 +84,8 @@
                     </div>
                 </div>
                 <div>
-                    <div class="row">
-                        <video class="full-width" controls>
-                            <source src="https://youtu.be/A8UWBkgpKyE" type="video/mp4">
-                        </video>
+                    <div class="iframe-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/A8UWBkgpKyE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                     <div class="full-width"><img width="100%" src="./images/title.png" /></div>
                     <div class="full-width row">
